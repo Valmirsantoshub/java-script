@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Notas</title>
+    <style>
+        body {
+            font:normal 20pt arial;
+            background-color: pink;
+        }
+        h1{
+            
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font:normal 15pt arial;
+            
+        }
+        div#res{
+            text-align: center;
+            font:normal 20pt arial;
+        }
+        button{
+            font-size: 12pt; padding: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1><ins> Notas de Alunos</ins> </h1>
+    <p>
+        digite a primeira nota <input type="number" name="nota1" id="nota1"><br><br>
+        digite a segunda nota <input type="number" name="nota2" id="nota2"><br><br>
+        digite a terceira nota <input type="number" name="nota3" id="nota3"><br>
+    </p>
+    <P><input type="button" value="calcular media" onclick="calcular()"></P>
+    
+    <div id="res">
+        aqui vai aparecer o resultado.
+        &#128540
+    
+    
+
+    </div>
+    <p>&#128526</p>
+
+
+    
+</body>
+<script>
+    function calcular(){
+       /* var nome = prompt('digite seu nome')
+        var res = document.querySelector("div#res")
+        var n1 = Number(parseFloat(nota1.value))
+        var n2 = Number(parseFloat(nota2.value))
+        var n3 = Number(parseFloat(nota3.value))
+        var media = (n1 + n2 + n3) /2
+        res.innerHTML = `calculando a media final: ${nome}</br></br>`
+        res.innerHTML += `as notas obtidas foram <strong><mark>${n1}, ${n2} e ${n3}</mark></strong></br></br>`
+        res.innerHTML += `a média final é<strong> <mark>${media}</mark></strong></br></br>`
+        res.innerHTML +=`A mensagem que temos é: Meus Parabéns! ${nome} `*/
+    
+    
+
+
+    
+        var nome = prompt('digite seu nome')
+        var res = document.querySelector("div#res")
+        var n1 = Number(nota1.value)
+        var n2 = Number(nota2.value)
+        var n3 = Number(nota3.value)
+        var media = (n1 + n2 + n3) /3
+        res.innerHTML = `calculando a media final de:<mark> ${nome}</mark></br></br>`
+        res.innerHTML += `as notas obtidas foram <strong><mark>${n1}, ${n2} e ${n3}</mark></strong></br></br>`
+        res.innerHTML += `a média final é<strong> <mark>${media.toFixed(2)}</mark></strong></br></br>`
+        res.innerHTML +=`A mensagem que temos é: Meus Parabéns! <mark>${nome}</mark> `
+
+
+    }
+</script>
+<p>&copy; <em>Mestre Java</em>.</p>
+</html>

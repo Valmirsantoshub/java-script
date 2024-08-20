@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Cálculos</title>
+</head>
+<body>
+    <h1><ins>Somando Números</ins></h1>
+    <form action="calculadora.php" method="post"></form>
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" name="num1" required><br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" name="num2" required><br><br>
+    <!--<input type="submit" value="Calcular"><!-->
+    <input type="button" value="calcular"onclick="calcular()"><br><br>
+    <div id="resultado"><strong>resultado!</strong>
+        
+    </div>
+    
+    
+    
+</body>
+<script>
+    function calcular(){
+    var num1 = document.getElementById("num1")
+    var num2 = document.getElementById("num2")
+    var resultado = document.getElementById("resultado")
+    var num1 = Number(num1.value)
+    var num2 = Number(num2.value)
+    var s = num1 * num2 
+    resultado.innerHTML=` o resultado da multiplicação entre <mark><strong>${num1} e ${num2} é ${s}</strong></mark>`
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorando</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1><ins>Fatorial de Numeros</ins></h1>
+    <p>insira um numero:<input type="number" name="numero" id="numero">
+    <input type="button" value="calcular"onclick='calcular()'>
+</p>
+
+    <div id="res">
+        aqui vai o resultado
+
+    </div>
+    
+    
+</body>
+<script>
+
+   function calcular(){
+        let numero = document.getElementById('numero').value
+        let res = document.getElementById('res')
+        let fatorial = 1
+        for(let i = 1; i <= numero; i++){
+            fatorial *= i
+            res.innerHTML = `o resultado fatorial de<mark> ${numero} é ${fatorial}</mark> `
+
+        }
+    }
+    
+    
+
+</script>
+        
+
+
+
+</html>

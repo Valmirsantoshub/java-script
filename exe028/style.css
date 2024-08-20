@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(149, 148, 214);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-container{
+    display: flex;
+    justify-content: space-around;
+}
+.titulo{
+    display: inline;
+}
+.container div{
+    background-color: rgb(39, 39, 235);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 40%;
+    
+}
+.content-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    
+}
+.content-container div{
+    width: 400px;
+    padding: 20px;
+}
+.content-container img{
+    border-radius: 15px;
+}

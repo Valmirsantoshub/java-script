@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font:normal 20pt arial;
+            background-color: aquamarine;
+
+        }
+        h1{
+            text-align: center;
+        
+
+        }
+        p{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Sistema de Votação</h1>
+   <p>
+       Digite a sua idade <input type="number" name="txtidade" id="txtidade">
+        <input type="button" value="calcular"onclick="calcular()">
+   </p>
+    <div id="res">
+
+    </div>
+    
+</body>
+<script>
+    function calcular(){
+        var idade = document.getElementById("txtidade")
+        var res = document.getElementById("res")
+        var idade =(txtidade.value)
+        res.innerHTML =`<p> com idade de <strong>${idade}</strong> anos </p>`
+        if(idade<16){
+            res.innerHTML=`<p>você não está <strong>apto</strong> a votar!</p>`
+
+        }else if(idade<=50 || idade<=65){
+            res.innerHTML+=`<p>seu voto é <strong>obrigatório</strong></p>`
+
+        }else{
+            
+            res.innerHTML=`<p> seu voto é <strong> opcional</strong></p>`
+        }
+    }
+</script>
+</html>

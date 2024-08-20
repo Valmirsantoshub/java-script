@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Velocidade</title>
+    <style>
+        body{
+            font: 20 pt arial;
+        }
+        h1{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            font: 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1><ins>Sistemas de Multas</ins></h1>
+    <p>velocidade <input type="number" name="vel" id="vel"> km/hora 
+    <input type="button" value="calcular"onclick='calcular()'><br>
+</p>
+
+    <div id="res"><br><br>
+        aqui vai o resultado!
+
+    </div>
+    <p>
+        <abbr title="Hyper Text Markup Language">estou estudando HTML</abbr> e <abbr title="Cascading Style Sheets"> CSS </abbr><br>
+        &#128526
+        &#9996
+        &#65039
+    </p>
+    
+</body>
+<script>
+    function calcular(){ 
+        var vel = document.getElementById('vel')
+        var res = document.getElementById('res')
+        var velocidade = Number(vel.value)
+        res.innerHTML = `<p>A sua velocidade atual é de:<strong> <mark>${velocidade}</strong> km por hora.</mark><br></p>`
+        if(velocidade>=100){
+            res.innerHTML += `<p> você ultrapassou o limite de velocidade você está <mark><strong><ins>MULTADO!</ins></strong></mark><br></p>`
+        }else if(velocidade >=80 || vel<=90){
+            res.innerHTML +=`<p>vc está dentro do limite de velocidade,use sempre o <mark><strong><ins>CINTO DE SEGURANÇA</ins></strong></mark>.</p>`
+        }else{
+            res.innerHTML+=`<p>use sempre o <mark><strong>cinto de segurança</strong></mark>.</p>`
+
+        }
+        res.innerHTML+=`<p>dirija sempre com atenção e tenha uma boa viagem.</p>`
+
+
+    }
+</script>
+</html>

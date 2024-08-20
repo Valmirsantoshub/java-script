@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estrangeiros</title>
+    <style>
+        body{           /* stilo onde eu crio toda minha parte de designer*/
+            background-color: rgb(128, 128, 235);
+            font: 15pt arial;
+            color: white;
+        }
+        h1{
+            color: black;
+            text-align: center;
+        }
+        p{
+            color: black;
+            text-align: center;
+        }
+
+            
+            
+    </style>
+</head>
+<body>
+    <h1>Controle de Estrangeiros</h1>  <!--no corpo onde eu crio meu titulo e meus botoes e minhas divs e caixas-->
+    <p>
+        Digite seu Pais de origem <input type="text" name="txtpais" id="txtpais">
+        <input type="button" value="verificar"onclick="verificar()">
+    </p>
+    <div id="res">
+
+    </div>
+
+    
+</body>
+<script>   // no script onde eu crio toda minha interatividade minhas funcões//
+    
+    function verificar(){  
+        var txtpais = document.getElementById('txtpais')
+
+        var res = document.getElementById("res")
+        var pais = (txtpais.value)
+        res.innerHTML = `<p> nascido em <strong>${pais}</strong> pais de nascimento </p>`
+        if(pais == `Brasil`){
+            res.innerHTML += `<p> você é <strong> Brasileiro! </strong> </P>`
+        } else if (pais != `Brasil`){
+            
+            res.innerHTML +=`<p> você é <strong>estrangeiro!</strong> </p>`
+        }
+
+    }
+</script>
+</html>

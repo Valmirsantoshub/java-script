@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Emojis Grandes</title>
+    <style>
+        body {
+            font: 15pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1><ins>Cálculos</ins></h1>
+    <input type="text" name="txtn1" id="txtn1">
+    <br><input type="button" value="Cálculos" onclick="Cálculos()">
+    <div id="res">
+        <p style="font-size:100px">&#128540;</p>
+        
+        
+<p style="font: size 100px">&#128526;</p>
+&#128520
+
+
+    </div>
+
+</body>
+<script>
+    function Cálculos(){
+        let txtn1 = document.getElementById('txtn1').value
+    let res = document.getElementById('res')
+    let n1 = (txtn1)
+    let resultado = n1 ** 2;  
+    let resultado1 = n1 /2;
+    let resultado2 = n1-2
+    let resultado3 = n1 % 2
+    let resultado4 = n1 **3
+    res.innerHTML = `<p>O resultado da potência é <mark>${resultado}</mark></p>`
+    res.innerHTML+= `<p>O resultado da divisão é <mark>${resultado1}</mark></p>`
+    res.innerHTML+= `<p>O resultado da subtração é <mark>${resultado2}</mark></p>`
+    res.innerHTML+= `<p>O resultado do resto da divisão é <mark>${resultado3}</p>`
+        res.innerHTML+= `<p>O resultado da potência cubica é <mark>${resultado4}</p>`
+    }
+    
+    
+    
+
+
+
+    
+</script>
+</html>

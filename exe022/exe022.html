@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Controle de Estrangeiros</title>
+</head>
+<body>
+    <h1><ins>Imigração</ins></h1>
+    <h2>Controle de Estrangeiros</h2>
+    <p>Pais de Nascimento <input type="txt" name="txtpais" id="txtpais"> 
+    <input type="button" value="Verificar"onclick='verificar()'>
+
+    <div id ='res'>
+
+    </div>
+</p>
+    
+</br>
+<script>
+    function verificar(){
+        var txtpais = document.getElementById('txtpais')
+        var res = document.getElementById('res')
+        var pais = (txtpais.value)
+        res.innerHTML=`<p> Nascido em<mark> ${pais}</mark> Pais de Nascimento.</p>`
+        if(pais ==`Brasil`){
+            res.innerHTML+=`<p>você é Brasileiro.</p>`
+            
+        }else if(pais!= `Brasil`){
+            res.innerHTML+=` Você é Estrangeiro.`
+        }
+
+    }
+</script>
+</html>

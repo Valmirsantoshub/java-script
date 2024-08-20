@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            background-color: rgb(63, 63, 245);
+            color: white;
+            font: normal 20 pt arial; 
+            
+        }
+        P{
+            color: black;
+            font: normal 18pt arial;
+            text-align: center;
+        }
+        div{
+            color: black;
+            font: normal 18pt arial;
+            text-align: center;
+        }
+        h1{
+            color: black;
+            text-align: center;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <h1>iniciando estudos com o Dom</h1>
+    <p>aqui vai o resultado!</p>
+    <p>aprendendo a usar o <strong>Dom </strong>em Java Script</p>
+    <div id = "msg">clique aqui</div> 
+
+</body>
+<script>
+    var corpo = window.document.body
+    var p1 = window.document.getElementsByTagName('p')[0]
+   // window.document.write(`está escrito assim ${p1.innerText}`)
+    var d = window.document.getElementById('msg')
+    d.style.background = `green`
+    d.innerText = `estou aguardando...`
+   /*var d = document.querySelector('div#msg')
+    d.style.color = 'black'
+    d.style.background ='blue'*/
+</script>
+</body>
+</html>
